@@ -1,21 +1,92 @@
-<!-- /admin/admin.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+            color: #555;
+        }
+        
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        p {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        #currentOutcome {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Game Control Page</h1>
-    <label for="outcome">Select Game Outcome:</label>
-    <select id="outcome">
-        <option value="win">Win</option>
-        <option value="lose">Lose</option>
-        <option value="random">Random</option>
-    </select>
-    <button id="updateOutcome">Update Outcome</button>
-    <p id="currentOutcome">Current Outcome: random</p>
+    <div class="container">
+        <h1>Game Control Page</h1>
+        <label for="outcome">Select Game Outcome:</label>
+        <select id="outcome">
+            <option value="win">Win</option>
+            <option value="lose">Lose</option>
+            <option value="random">Random</option>
+        </select>
+        <button id="updateOutcome">Update Outcome</button>
+        <p id="currentOutcome">Current Outcome: random</p>
+    </div>
 
     <script>
         // Function to update the outcome
